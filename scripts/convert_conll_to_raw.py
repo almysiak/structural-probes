@@ -15,6 +15,9 @@ args = argp.parse_args()
 
 buf = []
 
+# TODO is it better to tokenize using bert's tokenizer, or use the tokenized versions?
+# Check the paper!
+
 for line in open(args.input_conll_filepath):
   if line.startswith('#'):
     continue

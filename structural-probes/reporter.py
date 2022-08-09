@@ -45,7 +45,7 @@ class Reporter:
           tqdm.write("Reporting method {} not in test set reporting "
               "methods (reporter.py); skipping".format(method))
           continue
-        tqdm.write("Reporting {} on split {}".format(method, split_name))
+        tqdm.write("Reporting {} on split {} in {}".format(method, split_name, self.reporting_root))
         self.reporting_method_dict[method](prediction_batches
             , dataloader, split_name)
       else:
